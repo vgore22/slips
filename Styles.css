@@ -1,0 +1,76 @@
+/* ====== Reset & Base ====== */
+* { box-sizing: border-box; }
+html,body { height:100%; margin:0; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:#222; background:#f7f8fb; }
+.container { max-width:1100px; margin:0 auto; padding:18px; }
+
+/* ====== Header ====== */
+.site-header { background:#0b63d6; color:#fff; }
+.header-inner { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 0; }
+.brand { font-weight:700; color:#fff; text-decoration:none; font-size:1.25rem; }
+.main-nav { display:flex; gap:12px; align-items:center; }
+.main-nav .nav-link { color:rgba(255,255,255,0.95); text-decoration:none; padding:8px 10px; border-radius:6px; font-weight:600; }
+.main-nav .nav-link.active { background:rgba(255,255,255,0.12); }
+.nav-actions { display:flex; gap:10px; align-items:center; }
+.menu-btn { display:none; background:none; border:none; color:#fff; font-size:20px; padding:6px 8px; cursor:pointer; }
+
+/* ====== Hero ====== */
+.hero { padding:56px 0; background: linear-gradient(180deg, rgba(11,99,214,0.08), rgba(11,99,214,0.02)); text-align:center; }
+.hero h1 { margin:0 0 8px; font-size:2.1rem; color:#073e91; }
+.hero p { margin:0 0 16px; color:#334155; font-size:1.05rem; }
+.hero-actions { display:flex; gap:12px; justify-content:center; margin-top:8px; }
+
+/* ====== Utilities ====== */
+.btn { display:inline-block; padding:10px 14px; border-radius:8px; background:#0b63d6; color:#fff; text-decoration:none; border:0; cursor:pointer; font-weight:600; }
+.btn.outline { background:transparent; color:#0b63d6; border:2px solid #0b63d6; }
+.btn.small { padding:6px 10px; font-size:0.9rem; border-radius:6px; }
+.link { color:#0b63d6; text-decoration:none; font-weight:600; }
+
+/* ====== Page Title ====== */
+.page-title { font-size:1.4rem; margin:14px 0; color:#0b3a91; }
+
+/* ====== Cards & Grids ====== */
+.card { background:#fff; padding:16px; border-radius:10px; box-shadow:0 6px 18px rgba(16,24,40,0.04); margin-bottom:16px; }
+.feature { text-align:left; }
+.grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:12px; }
+.grid-2 { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+
+/* ====== Forms ====== */
+label { display:block; margin:10px 0 6px; font-weight:600; color:#334155; }
+input[type="text"], input[type="email"], input[type="password"], input[type="number"], textarea, select {
+  width:100%; padding:10px 12px; border-radius:8px; border:1px solid #e6edf3; font-size:0.98rem; background:#fbfdff;
+}
+textarea { min-height:120px; resize:vertical; }
+
+/* ====== PDF list & modal ====== */
+.pdf-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:14px; margin-top:12px; }
+.pdf-card h3 { margin:0 0 6px; font-size:1.05rem; }
+.pdf-actions { display:flex; gap:8px; margin-top:10px; }
+.modal { position:fixed; inset:0; background:rgba(8,12,20,0.6); display:flex; align-items:center; justify-content:center; z-index:9999; }
+.modal-inner { width:95%; max-width:1100px; background:#fff; border-radius:10px; padding:12px; }
+
+/* ====== Footer ====== */
+.site-footer { padding:18px 0; text-align:center; color:#475569; background:#fff; margin-top:28px; border-top:1px solid #eef2f7; }
+
+/* ====== Tables ====== */
+.results-table { width:100%; border-collapse:collapse; margin-top:12px; }
+.results-table th, .results-table td { padding:8px 10px; border:1px solid #eef2f7; }
+
+/* ====== Small widths for forms ====== */
+.small-width { max-width:620px; margin:30px auto; }
+
+/* ====== Helpers ====== */
+.meta { font-size:0.85rem; color:#6b7280; margin:6px 0; }
+.err { color:#7f1d1d; background:#fff1f2; padding:8px; border-radius:6px; }
+.msg { color:#064e3b; background:#ecfdf5; padding:8px; border-radius:6px; }
+
+/* ====== Responsive ====== */
+@media (max-width:900px) {
+  .grid-3 { grid-template-columns:repeat(2,1fr); }
+  .menu-btn { display:block; }
+  .main-nav { display:none; position:absolute; top:62px; right:12px; background:#0b63d6; padding:12px; border-radius:8px; flex-direction:column; }
+  .main-nav .nav-link { color:#fff; padding:8px 12px; }
+}
+@media (max-width:600px) {
+  .grid-3 { grid-template-columns:1fr; }
+  .grid-2 { grid-template-columns:1fr; }
+}
